@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OfflineTube</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+
+  <header>
+    <h1>OfflineTube 📺</h1>
+    <div id="status">Vérification de la connexion...</div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h3>Ajouter une vidéo à la mémoire locale</h3>
+      <input type="file" id="videoInput" accept="video/*">
+    </section>
+
+    <section>
+      <h2>Vidéos enregistrées (Accessibles sans Wi-Fi)</h2>
+      <div id="videoList">
+        <p class="empty-msg">Aucune vidéo enregistrée pour le moment.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
