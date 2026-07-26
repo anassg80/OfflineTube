@@ -2,37 +2,63 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   background-color: #121212;
   color: #ffffff;
-  padding: 20px;
+  padding: 15px;
   margin: 0;
-  text-align: center;
 }
 
 h1 {
-  color: #ff0000;
+  color: #e50914;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 28px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.status-badge {
+  background-color: #1e2922;
+  color: #4cd964;
+  border: 1px solid #23472b;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  background-color: #1c1c1e;
+  padding: 18px;
+  border-radius: 14px;
   margin-bottom: 20px;
 }
 
-.btn {
-  background-color: #ff0000;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
+.separator {
+  border: 0;
+  border-top: 1px solid #2c2c2e;
   margin-bottom: 15px;
 }
 
 #searchInput {
-  width: 90%;
-  max-width: 400px;
+  width: 100%;
   padding: 12px 15px;
-  margin: 10px auto 20px auto;
-  display: block;
-  background-color: #1e1e1e;
+  margin-bottom: 20px;
+  background-color: #1c1c1e;
   color: #ffffff;
-  border: 1px solid #333;
+  border: 1px solid #2c2c2e;
   border-radius: 10px;
   font-size: 16px;
   outline: none;
@@ -40,40 +66,26 @@ h1 {
 }
 
 #searchInput:focus {
-  border-color: #ff0000;
+  border-color: #3a3a3c;
 }
 
-.player-container {
-  margin: 20px 0;
+.video-card {
+  background-color: #1c1c1e;
+  padding: 15px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+}
+
+.video-card .video-title {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 12px;
+  word-break: break-word;
 }
 
 video {
   width: 100%;
-  max-width: 600px;
-  border-radius: 12px;
+  border-radius: 10px;
   background-color: #000;
-}
-
-.video-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.video-card {
-  background-color: #1e1e1e;
-  padding: 15px;
-  border-radius: 8px;
-  text-align: left;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  word-break: break-word;
-}
-
-.video-card:hover {
-  background-color: #2a2a2a;
+  display: block;
 }
