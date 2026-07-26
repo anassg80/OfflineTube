@@ -4,32 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OfflineTube</title>
-  <link rel="stylesheet" href="style.css">
+
   <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="OfflineTube">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <h1>OfflineTube 📺</h1>
 
-  <!-- Badge de statut -->
   <div id="statusBadge" class="status-badge">
     🌐 Connecté (Prêt pour la synchronisation Wi-Fi)
   </div>
 
-  <!-- Zone d'importation originale -->
   <div class="card">
     <h3>Ajouter une vidéo à la mémoire locale</h3>
     <input type="file" id="videoInput" accept="video/*" multiple onchange="handleFileSelect(event)">
   </div>
 
-  <!-- Section Vidéos enregistrées -->
   <h2>Vidéos enregistrées (Accessibles sans Wi-Fi)</h2>
   <hr class="separator">
 
-  <!-- La barre de recherche ajoutée -->
   <input type="text" id="searchInput" placeholder="🔍 Rechercher une vidéo..." oninput="filterVideos()">
 
-  <!-- Conteneur des cartes vidéos -->
   <div id="videoList"></div>
 
   <script src="app.js"></script>
