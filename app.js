@@ -26,6 +26,7 @@ function addVideoCard(file) {
   videoList.appendChild(card);
 }
 
+// Fonction de filtrage pour la barre de recherche
 function filterVideos() {
   const input = document.getElementById('searchInput').value.toLowerCase();
   const cards = document.querySelectorAll('.video-card');
@@ -40,7 +41,7 @@ function filterVideos() {
   });
 }
 
-// Gestion du badge de connexion
+// Gestion automatique du mode En Ligne / Hors Ligne
 window.addEventListener('online', updateOnlineStatus);
 window.addEventListener('offline', updateOnlineStatus);
 
@@ -58,3 +59,6 @@ function updateOnlineStatus() {
     badge.style.borderColor = '#473223';
   }
 }
+
+// Initialise le statut dès le chargement
+updateOnlineStatus();

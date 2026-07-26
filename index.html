@@ -12,25 +12,25 @@
   <h1>OfflineTube 📺</h1>
 
   <!-- Badge de statut -->
-  <div id="statusBadge" class="status-badge online">
+  <div id="statusBadge" class="status-badge">
     🌐 Connecté (Prêt pour la synchronisation Wi-Fi)
   </div>
 
-  <!-- Zone d'importation -->
+  <!-- Zone d'importation originale -->
   <div class="card">
     <h3>Ajouter une vidéo à la mémoire locale</h3>
     <input type="file" id="videoInput" accept="video/*" multiple onchange="handleFileSelect(event)">
   </div>
 
-  <!-- Section Liste des vidéos -->
+  <!-- Section Vidéos enregistrées -->
   <h2>Vidéos enregistrées (Accessibles sans Wi-Fi)</h2>
   <hr class="separator">
 
-  <!-- Barre de recherche -->
+  <!-- La barre de recherche ajoutée -->
   <input type="text" id="searchInput" placeholder="🔍 Rechercher une vidéo..." oninput="filterVideos()">
 
-  <!-- Conteneur des vidéos -->
-  <div id="videoList" class="video-list"></div>
+  <!-- Conteneur des cartes vidéos -->
+  <div id="videoList"></div>
 
   <script src="app.js"></script>
   <script>
