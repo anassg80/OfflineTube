@@ -5,30 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OfflineTube</title>
   <link rel="stylesheet" href="style.css">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.json">
 </head>
 <body>
 
-  <header>
-    <h1>OfflineTube 📺</h1>
-    <div id="status">Vérification de la connexion...</div>
-  </header>
+  <h1>OfflineTube 🎬</h1>
 
-  <main>
-    <section class="card">
-      <h3>Ajouter une vidéo à la mémoire locale</h3>
-      <input type="file" id="videoInput" accept="video/*">
-    </section>
+  <div class="input-container">
+    <input type="file" id="videoInput" accept="video/*" multiple style="display: none;" onchange="handleFileSelect(event)">
+    <button class="btn" onclick="document.getElementById('videoInput').click()">📁 Choisir une vidéo</button>
+  </div>
 
-    <section>
-      <h2>Vidéos enregistrées (Accessibles sans Wi-Fi)</h2>
-      <div id="videoList">
-        <p class="empty-msg">Aucune vidéo enregistrée pour le moment.</p>
-      </div>
-    </section>
-  </main>
+  <input type="text" id="searchInput" placeholder="🔍 Rechercher une vidéo..." oninput="filterVideos()">
+
+  <div class="player-container">
+    <video id="mainPlayer" controls style="display: none;"></video>
+  </div>
+
+  <h2>Mes Vidéos</h2>
+  <div id="videoList" class="video-list"></div>
 
   <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
 </body>
 </html>
